@@ -1,11 +1,18 @@
 from transformers import pipeline
 from flask import Flask, jsonify, request
-import re
+from flask_cors import CORS
+import os
+
+base_path = os.getcwd()
 
 NO_OF_SENTENCES_READ = 3
 
 app = Flask(__name__)
+app.secret_key = 'asdf'
+app._static_folder = base_path
+app._static_files_root_folder_path = base_path
 
+CORS(app)
 
 @app.route('/process', methods=['POST'])
 def generate_summary():
@@ -74,4 +81,4 @@ def generate_summary():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(port=80)
