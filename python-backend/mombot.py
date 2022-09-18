@@ -37,7 +37,7 @@ def generate_summary():
                 action_flag = 1
                 break
 
-        if action_flag == 1:
+        if action_flag == 1 and '?' not in sentence:
             while "[" in sentence and "]" in sentence:
                 rem = ""
                 start = sentence.find("[")
@@ -46,7 +46,12 @@ def generate_summary():
                     rem = "[" + sentence[start + 1:end] + "]"
                 sentence = sentence.replace(rem, '')
 
-            action = sentence.replace(':', ' said that, ')
+            file = open('delete_keywords.txt', "r")
+            delete_keywords_lines = file.readlines()
+
+            replace_string = sentence.split(':')[1].split(',')[0]
+            sentence = sentence.replace(replace_string + ',', '')
+            action = sentence.replace(':', ' - ')
             action_points.append(action)
 
     print(action_points)
