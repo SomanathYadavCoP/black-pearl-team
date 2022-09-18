@@ -3,7 +3,6 @@ import os
 from flask import Flask, jsonify
 import requests
 NO_OF_LINES_READ = 10
-port = 9999
 
 def read_transcript(file_name):
     file = open(file_name, "r")
@@ -12,18 +11,19 @@ def read_transcript(file_name):
 
 app = Flask(__name__)
 
-@app.route('/summarize', methods=['POST'])
+@app.route('/')
 def generate_summary(file_path='transcript.txt'):
     # Read and make string of entire file
     filedata = read_transcript(file_path)
     filelines = len(filedata)
+    print(filedata)
     total_summary = []
     summarizer = pipeline("summarization", model="knkarthick/MEETING_SUMMARY")
     for i in range(0, filelines, NO_OF_LINES_READ):
         data = '. '.join(filedata[i:i + NO_OF_LINES_READ])
         summary = summarizer(data[:1024])
         print(summary)
-        total_summary.append(summary['summary_text'])
+        total_summary.append(summary[0]['summary_text'])
         final_summary = '. '.join(total_summary)
 
     print(final_summary)
