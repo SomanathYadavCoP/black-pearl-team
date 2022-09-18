@@ -1,0 +1,51 @@
+[00:00:00]Interviewer 1:	Without further ado, let’s bring out the Steve I think you all are here to see.
+
+[00:00:10]
+Interviewer 2: 	Steve Jobs.
+
+[00:00:24]
+Interviewer 1:	Just this week you surpassed Microsoft in, um, market valuation, and we thought you might have a thought or two about that.
+
+[00:00:35]
+Interviewee: 	Um… it… for those of us that have been in the industry a long time, it’s surreal. Uh… but, it… it doesn’t matter very much.
+
+[00:00:45]
+Interviewer 2:	So, you published a long, open letter. Something like, what did you call it? Thoughts on Flash or something like that. So, you’ve… you’ve clearly, uh, stated your case there. Is it really fair or the best thing for consumers who buy… say an iPad or an iPhone to just be abrupt?
+
+[00:01:05]
+Interviewee:	Apple is a company that has… doesn’t have the most resources of everybody in the world. And, um, the way we’ve succeeded is by choosing what horses to ride really carefully, technically. We try to look for these technical vectors that have a future. And that are headed up. And, you know, technology… different pieces of technology kind of go in cycles. They have their, their springs and summers and autumns and then they, you know, go to the graveyard of technology. And so we try to pick things that are in their springs. And if you choose wisely, you can save yourself an enormous amount of work versus trying to do everything. So, we have a history of doing that. As an example, we went from the five inch floppy disk to three and a half inch floppy disk with the Mac. And sometimes when we get rid of things, like the [00:02:00] floppy disk drive on the original iMac, people call us crazy. But, sometimes you just have to pick the things that look like they’re going to be the right horses to ride going forward. And… and flash looks like a technology that had its day. But is really on the… is waning. And HTML 5 looks like the technology that’s really on the ascendancy right now.
+
+[00:02:20]
+Interviewer 2:	It’s also a development environment and there are entire websites… some of them quite beautiful… written on a flash platform.
+
+[00:02:28]
+Interviewee:	You know, one of the… an even more popular development environment was HyperCard, and we were okay to axe that.
+
+[00:02:35]
+Interviewer 2:	It wasn’t more popular than Flash, was it?
+
+[00:02:38]
+Interviewee:	Oh… in its day, sure it was.
+
+[00:02:40]
+Interviewer 2:	On your platform, right?
+
+[00:02:43]
+Interviewee:	No, no, no, no, no. HyperCard was huge in its day because it was… because it was accessible to anybody. We… we didn’t start off to have a war with Flash or anything else. We just made a technical decision that we weren’t going to put the energy into getting Flash on our platform. We told Adobe, “If you ever have this thing running fast, come back and show us.” Which they never did. And… uh… but… but people were not going to use it. And that was it. And we shipped the iPhone. And it doesn’t use Flash. And it wasn’t until we shipped the iPad, and it didn’t use flash, that Adobe started to raise a stink about it. And that’s why I wrote Thoughts on Flash… was because we were trying to be real professional about this and weren’t talking to the press about it. We didn’t think it was a matter for the press. And we finally just said, enough is enough. We’re tired of these guys trashing us in the press over this.
+
+[00:03:15]
+Interviewer 2:	What if the market says, “Hey, you know, it’s important enough to us to be able to run not just these videos but whole websites.” What if people say, you know, the iPad is… uh… crippled in this respect?
+
+[00:03:25]
+Interviewee:	Well, you know, well I’d say two things. Number one, things are packages of… of emphasis. Some things are emphasized in a product. Some things are not done as well in a product. Some things are chosen not to be done at all in a product. And so different people make [00:04:00] different choices. And, uh, if the market tells we’re making the wrong choices, we listen to the market. We’re just… we’re just people running this company. We’re trying to make great products for people. And so we have at least the courage of our convictions to say we don’t think this is part of what makes a great product. We’re going to leave it out. That’s what a lot of customers pay us to do… is to try to make the products that we can. And if we succeed, they’ll buy them. And if we don’t, they won’t. And it’ll all work itself out.
+
+[00:04:10]
+Interviewer 1:	So, uh.
+
+[00:04:12]
+Interviewee: 	So, you know so far, I’d have to say, that that that people seem to be liking iPads. You know. I mean we’ve sold one every three seconds since launched it. So, I don’t know how it’s going to come out.
+
+[00:04:30]
+Interviewer 2:	It takes you three whole seconds to sell one? Can’t you do better?
+
+
