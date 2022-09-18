@@ -55,6 +55,8 @@ def generate_summary():
     summarizer = pipeline("summarization", model="knkarthick/MEETING_SUMMARY")
     for i in range(0, no_of_sentences, NO_OF_SENTENCES_READ):
         data = '. '.join(transcript[i:i + NO_OF_SENTENCES_READ])
+        if len(data) < 200:
+            continue
         summary = summarizer(data[:1024])
         total_summary.append(summary[0]['summary_text'])
 
