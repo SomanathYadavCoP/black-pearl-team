@@ -81,4 +81,6 @@ def generate_summary():
 
 
 if __name__ == "__main__":
-    app.run(port=80)
+    print(' * Starting app with base path:', base_path)
+    app.debug = True
+    app.run(host='0.0.0.0', threaded=True, port=80)
