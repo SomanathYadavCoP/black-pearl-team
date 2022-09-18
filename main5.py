@@ -1,8 +1,11 @@
 from transformers import pipeline
 import os
 from flask import Flask, jsonify
+import smtplib
 import requests
+from email.mime.text import MIMEText
 NO_OF_LINES_READ = 10
+MY_EMAIL = "milindbobade@gmail.com"
 
 def read_transcript(file_name):
     file = open(file_name, "r", encoding='utf-8')
@@ -38,13 +41,24 @@ def generate_summary(file_path='transcript.txt'):
         final_summary = ' '.join(total_summary)
 
     print(final_summary)
-    return jsonify({
-        "summary": final_summary,
-        "participants": ','.join(participants)
-        })
+
+    with open("mail_template.txt") as template:
+        message = template.read().replace("[Participants]", ','.join(participants)).replace("[Summary]", final_summary)
+    with smtplib.SMTP("smtp.mailtrap.io", 2525) as server:
+        server.starttls()
+        server.login("7f8de7d4b9ba45", "228e0264aedbda")
+        server.sendmail(from_addr=MY_EMAIL,
+                        to_addrs="milindbobade@gmail.com",
+                        msg=f"Subject: Meeting MOM\n\n{message}")
+
+    #return jsonify({
+    #    "summary": final_summary,
+    #    "participants": ','.join(participants)
+    #   })
 
 if __name__ == "__main__":
-    app.run()
+    #app.run()
     #print('Running as testing server.')
     #app.debug = True
     #app.run(host='0.0.0.0', threaded=True, port=port)
+    generate_summary()
