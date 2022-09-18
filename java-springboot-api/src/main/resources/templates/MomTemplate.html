@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Minutes of Meetings</title>
+    <style type="text/css">
+    .title {
+        color: blue;
+        text-decoration: bold;
+        text-size: 1em;
+    }
+
+    .author {
+        color: gray;
+    }
+    body {
+	/* Font */
+	font-family: "Nunito Sans", Verdana, Helvetica, sans-serif;
+	font-size: 13px;
+
+	/* Text color */
+	color: #333;
+
+	/* Remove the background color to make it transparent */
+	background-color: #fff;
+
+	margin: 20px;
+}
+
+    </style>
+</head>
+
+<body>
+<p><strong>Meeting Subject:</strong> ${meetingInfo.subject}</p>
+
+<p><strong>Date:</strong> ${meetingInfo.meetingDate}<br/>
+    <strong>Location:</strong> ${meetingInfo.location}<br/>
+    <strong>Start Time:</strong> ${meetingInfo.startTime}<br/>
+    <strong>End Time:</strong> ${meetingInfo.endTime}</p>
+
+<p>&nbsp;</p>
+
+<hr/>
+<p><strong>Note Taker: </strong>MOM Bot</p>
+<p><U>Attendee Information</U></p>
+<table border="0" cellpadding="1" cellspacing="1" style="width:1111px" summary="All participant summary">
+
+    <tbody>
+    <tr>
+        <td style="width:97px"><strong>Participants:</strong>&nbsp;</td>
+        <td style="width:100%">
+            <#if meetingInfo.participants??>
+                <#list meetingInfo.participants as user> ${user.fullName}&lt;${user.emailId}&gt;;</#list>
+            </#if>
+        </td>
+    </tr>
+    <tr>
+        <td style="width:97px"><strong>Attendees:</strong></td>
+        <td style="width:100%">
+        <#if meetingInfo.attendees??>
+            <#list meetingInfo.attendees as user> ${user.fullName}&lt;${user.emailId}&gt;;</#list>
+        </#if>
+        </td>
+    </tr>
+    <tr>
+        <td style="width:97px"><strong>Apologies:</strong></td>
+        <td style="width:100%">
+            <#if meetingInfo.apologies??>
+                <#list meetingInfo.apologies as user> ${user.fullName}&lt;${user.emailId}&gt;;</#list>
+            </#if>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<p><strong>Summary Points:</strong>&nbsp;</p>
+<#if meetingInfo.finalSummaryPoints??>
+<ul>
+    <#list meetingInfo.finalSummaryPoints as myText>
+    <li>
+        ${myText}
+    </li>
+    </#list>
+</ul>
+<#else>
+<strong>No summary available!</strong>
+</#if>
+
+<p><strong>Action Items:</strong>&nbsp;</p>
+<#if meetingInfo.actionItems??>
+<ol>
+    <#list meetingInfo.actionItems as myText>
+    <li>
+        ${myText}
+    </li>
+    </#list>
+</ol>
+<#else>
+<strong>No action items for today!</strong>
+</#if>
+
+<hr/>
+<p><u>Disclaimer:</u>This is system generated email using HuggingFace AI - Natural Language Processing, Replies to this email will be ignored.</p>
+
+</body>
+</html>
