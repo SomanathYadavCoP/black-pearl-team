@@ -38,10 +38,14 @@ def generate_summary():
                 break
 
         if action_flag == 1:
-            sentence = re.sub('[0-9][0-9]:[0-9][0-9]', '', sentence).replace('[]','')
-            #print(sentence)
-            #if ']' in sentence:
-            #    sentence = sentence.split(']')[1]
+            while "[" in sentence and "]" in sentence:
+                rem = ""
+                start = sentence.find("[")
+                end = sentence.find("]")
+                if start != -1 and end != -1:
+                    rem = "[" + sentence[start + 1:end] + "]"
+                sentence = sentence.replace(rem, '')
+
             action = sentence.replace(':', ' said that, ')
             action_points.append(action)
 
@@ -58,7 +62,7 @@ def generate_summary():
 
     return jsonify({
         "summary": total_summary,
-        "action_points": action_points
+        "actionItems": action_points
     })
 
 
