@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MoM</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                font-family: sans-serif;
+                font-size: 1rem;
+            }
+
+            tr > :nth-child(1) {
+                vertical-align: initial;
+                white-space: nowrap;
+                font-size: 0.9rem;
+                font-weight: bold;
+            }
+            
+            tr > :nth-child(2) {
+                vertical-align: initial;
+                padding-left: 0.5rem;
+            }
+
+            .container {
+                margin: 0 20vw;
+                padding: 4rem 2rem;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .upper {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                border-bottom: 1px solid black;
+            }
+
+            .meetingSubject {
+                align-self: flex-start;
+                margin-bottom: 1rem;
+            }
+
+            .subItems {
+                align-self: flex-start;
+                margin-bottom: 1rem;
+            }
+
+            .subItems tbody tr td {
+                font-size: 0.9rem;
+            }
+
+            .middle {
+                margin-top: 2px;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                border-top: 1px solid black;
+                border-bottom: 1px solid black;
+            }
+
+            .middle table tbody tr td {
+                padding-bottom: 0.5rem;
+            }
+
+            .lower {
+                margin-top: 2px;
+                padding-top: 1rem;
+                border-top: 1px solid black;
+                border-bottom: 1px solid black;
+            }
+
+            .lower ul {
+                margin: 0.5rem 0 0 0;
+                padding-left: 2rem;
+            }
+
+            .lower ul li {
+                margin-bottom: 0.2rem;
+            }
+
+            .lower ul li:last-child {
+                margin-bottom: 1rem;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class='container'>
+            <div class="upper">
+                <div class="meetingSubject"><strong>MEETING SUBJECT : </strong>To discuss requirements for next delivery</div>
+                <table class="subItems">
+                    <tbody>
+                        <tr>
+                            <td>Date:</td>
+                            <td>18-Sept-2022</td>
+                        </tr>
+                        <tr>
+                            <td>Location:</td>
+                            <td>Teams Meeting</td>
+                        </tr>
+                        <tr>
+                            <td>Start Time:</td>
+                            <td>1500 IST</td>
+                        </tr>
+                        <tr>
+                            <td>End Time:</td>
+                            <td>1600 IST</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="middle">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Note Taker:</td>
+                            <td>MoM BOT</td>
+                        </tr>
+                        <tr>
+                            <td>Participants:</td>
+                            <td>(Milind)milindB@abc.com; (Rishabh)rishabhk@abc.com; (Anupam)anupamv@abc.com; (Somanath)somanathy@abc.com; (Rutuja)rutujad@abc.com;</td>
+                        </tr>
+                        <tr>
+                            <td>Attendees:</td>
+                            <td>(Milind)milindB@abc.com; (Rishabh)rishabhk@abc.com; (Somanath)somanathy@abc.com; (Rutuja)rutujad@abc.com;</td>
+                        </tr>
+                        <tr>
+                            <td>Apologies:</td>
+                            <td>(Anupam)anupamv@abc.com;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="lower">
+                <div class="summary">
+                    <strong>Summary Points:</strong>
+                    <ul>
+                        <li>qwerty ytrewq asdfg gfdsa zxcvb bvcxz</li>
+                        <li>lorem ispum dnce deliottctc ssel</li>
+                        <li>dom dom for fer der lkridg adf w</li>
+                    </ul>
+                </div>
+                <div class="action">
+                    <strong>Action Items:</strong>
+                    <ul>
+                        <li>qwerty ytrewq asdfg gfdsa zxcvb bvcxz</li>
+                        <li>lorem ispum dnce deliottctc ssel</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>
