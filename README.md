@@ -45,7 +45,7 @@ Two Docker images are pushed in docker hub at this URL -  https://hub.docker.com
 ### Prerequisite - 
   1. Docker should be installed on your machine.
   2. Postman application should be installed and logged in.
-  3. 
+  
 ### Run instructions - 
   1. For backend Python NLP processor API, get the image using command in command prompt- 
         docker pull somanathyadav/hackathonpy
