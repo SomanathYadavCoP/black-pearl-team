@@ -40,13 +40,26 @@
     * Dashboard to organize the MoMs
     * Send mail to the user Participants when the MoM is generated.
 
-* # Deploy and Run the Application:
-    * Python API Docker image on Docker hub - https://hub.docker.com/r/somanathyadav
-    * Backend Python NLP processor API get the image using command - docker pull somanathyadav/hackathonpy
-    * Run the docker image using docker run.
-    * REST API - Springboot to accept the meeting infomration and transcript
-    * Get the image using below command - docker pull somanathyadav/blackpearl
-    * Run the docker image using docker run.
-    * Using Postman post the JSON to below API-black-pearl-team/java-springboot-api/src/test/api/Meeting_1_Request.json
-    * http://localhost:8888/api/submit-transcript-api
-    * 
+* # Run the Application using Docker at your local system:
+Two Docker images are pushed in docker hub at this URL -  https://hub.docker.com/r/somanathyadav
+### Prerequisite - 
+  1. Docker should be installed on your machine.
+  2. Postman application should be installed and logged in.
+  3. 
+### Run instructions - 
+  1. For backend Python NLP processor API, get the image using command in command prompt- 
+        docker pull somanathyadav/hackathonpy
+  2. Run the Python API docker image using below docker run command in same command prompt -
+        docker run --rm -p 80:80 somanathyadav/hackathonpy:latest
+  3.  Open new command prompt and get the REST API - Springboot docker image using below command - 
+        docker pull somanathyadav/blackpearl     
+  4. In same command prompt, get machine's IPv4 Address using "ipconfig" command - 
+     For now, lets take it as  <192.168.50.50>  (It will be used in input parameter of next docker run command)
+  5. Run the REST API docker image using docker run -
+     (Please change the ipconfig got in previous step)
+        docker run --rm --env=spring.mail.username=somanath.yadav@gmail.com --env spring.mail.password=xmnxomrbftsofcgkpy --env python.summary.api.url=http://192.168.50.50/process -p 8088:8088 somanathyadav/blackpearl:latest
+  6. Using Postman, create a request to post the JSON to below API -
+      a. Enter the API in postman -   http://localhost:8088/api/submit-transcript-api
+      b. Input the JSON file commited in GIT path - black-pearl-team/java-springboot-api/src/test/api/Meeting_1_Request.json
+      
+     
