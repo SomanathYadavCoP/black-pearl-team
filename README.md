@@ -39,3 +39,14 @@
     * Share, edit, search and collaborate on the MOMs
     * Dashboard to organize the MoMs
     * Send mail to the user Participants when the MoM is generated.
+
+* # Deploy and Run the Application:
+    * Python API Docker image on Docker hub - https://hub.docker.com/r/somanathyadav
+    * Backend Python NLP processor API get the image using command - docker pull somanathyadav/hackathonpy
+    * Run the docker image using docker run.
+    * REST API - Springboot to accept the meeting infomration and transcript
+    * Get the image using below command - docker pull somanathyadav/blackpearl
+    * Run the docker image using docker run.
+    * Using Postman post the JSON to below API-black-pearl-team/java-springboot-api/src/test/api/Meeting_1_Request.json
+    * http://localhost:8888/api/submit-transcript-api
+    * 
